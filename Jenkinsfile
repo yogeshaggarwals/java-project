@@ -1,8 +1,5 @@
 pipeline {
   agent none
-  agent {
-    label 'cent'
-  }
 
   options {
     buildDiscarder(logRotator(numToKeepStr: '4', artifactNumToKeepStr: '2'))
@@ -60,7 +57,5 @@ pipeline {
         "java -jar rectangle_*${env.Build_number}.jar 3 4"
       }
     }
-
   }
-
 }
