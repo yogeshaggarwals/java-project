@@ -58,6 +58,7 @@ pipeline {
       steps {
         sh "wget http://10.67.130.102/rectangles/all/rectangle_*${env.Build_number}.jar"
         "java -jar rectangle_*${env.Build_number}.jar 3 4"
+      }
     }
 
   }
