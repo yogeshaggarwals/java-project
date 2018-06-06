@@ -23,7 +23,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh "cp dist/rectangle_${env.Build_number}.jar /var/www/html/rectangles/all/"
+        sh "cp dist/rectangle_*${env.Build_number}.jar /var/www/html/rectangles/all/"
       }
     }
   }
